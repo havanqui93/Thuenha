@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Thuenha
 {
-    public partial class frmlocthongtin : Form
+    public partial class Quanly : Form
     {
-        public frmlocthongtin()
+        public Quanly()
         {
             InitializeComponent();
-        }
-
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

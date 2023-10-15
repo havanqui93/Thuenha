@@ -16,7 +16,7 @@ namespace Thuenha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Locthongtin());
+            Application.Run(new frmlocthongtin());
         }
     }
 }
