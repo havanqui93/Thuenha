@@ -6,16 +6,15 @@ namespace Thuenha.DATATHUENHA
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Gia")]
-    public partial class Gia
+    [Table("Locdientich")]
+    public partial class Locdientich
     {
         [Key]
         [StringLength(10)]
         public string code { get; set; }
 
-        [Column("Gia")]
+        [Column("locdientich")]
         [Required]
-        [StringLength(30)]
-        public string Gia1 { get; set; }
+        public string locdientich1 { get; set; }
     }
 }

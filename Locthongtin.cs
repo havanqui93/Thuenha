@@ -30,23 +30,17 @@ namespace Thuenha
         //form tổng
         private void frmlocthongtin_Load(object sender, EventArgs e)
         {
-            cmbcapnha.SelectedIndex = 0;
             List<province> pro = db.provinces.ToList();
             hienthicmbthanhpho(pro);
 
             List<Gia> gi = db.Gias.ToList();
-            hienthicmbgiathuemax(gi);
-              
-            List<Gia> gi2 = db.Gias.ToList();
-            hienthicmbgiathuemin(gi2);
+            hienthicmbgiathue(gi);
+
+            List<phanloainha> pln = db.phanloainhas.ToList();
+            hienthicmbloainha(pln);
 
         }
 
-        //listview
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         //hiển thị combobox thành phố
         private void hienthicmbthanhpho (List<province> provinces)
@@ -56,18 +50,20 @@ namespace Thuenha
             cmbthanhpho.ValueMember = "code";
         }
 
-        //hiển thị combobox giá thuê max
-        private void hienthicmbgiathuemax(List<Gia> gias)
+        //hiển thị combobox giá thuê 
+        private void hienthicmbgiathue(List<Gia> gias)
         {
-            cmbgiathuemin.DataSource = gias;
-            cmbgiathuemin.DisplayMember = "Giá_thấp_nhất";
+            cmbgiathue.DataSource = gias;
+            cmbgiathue.DisplayMember = "Gia1";
+            cmbgiathue.ValueMember = "code";
         }
 
-        //hiển thị combobox giá thuê min
-        private void hienthicmbgiathuemin(List<Gia> gias)
+        //hiển thị cmb loại nhà
+        private void hienthicmbloainha(List<phanloainha> plns)
         {
-            cmbgiathuemax.DataSource = gias;         
-            cmbgiathuemax.DisplayMember = "Giá_cao_nhất";
+            cmbloainha.DataSource = plns;
+            cmbloainha.DisplayMember = "loainha";
+            cmbloainha.ValueMember = "maloainha";
         }
 
         //button lọc thêm
