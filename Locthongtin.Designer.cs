@@ -33,17 +33,17 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblt = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
-            this.cmbcapnha = new System.Windows.Forms.ComboBox();
             this.cmbthanhpho = new System.Windows.Forms.ComboBox();
             this.btnlocthem = new System.Windows.Forms.Button();
             this.btntimkiem = new System.Windows.Forms.Button();
-            this.cmbgiathuemin = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbgiathuemax = new System.Windows.Forms.ComboBox();
+            this.cmbgiathue = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cmbloainha = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,28 +78,10 @@
             this.lblt.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblt.Name = "lblt";
             // 
-            // txtsearch
-            // 
-            this.txtsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtsearch, "txtsearch");
-            this.txtsearch.Name = "txtsearch";
-            // 
-            // cmbcapnha
-            // 
-            this.cmbcapnha.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.cmbcapnha, "cmbcapnha");
-            this.cmbcapnha.FormattingEnabled = true;
-            this.cmbcapnha.Items.AddRange(new object[] {
-            resources.GetString("cmbcapnha.Items"),
-            resources.GetString("cmbcapnha.Items1"),
-            resources.GetString("cmbcapnha.Items2"),
-            resources.GetString("cmbcapnha.Items3"),
-            resources.GetString("cmbcapnha.Items4")});
-            this.cmbcapnha.Name = "cmbcapnha";
-            // 
             // cmbthanhpho
             // 
             this.cmbthanhpho.DisplayMember = "0";
+            this.cmbthanhpho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.cmbthanhpho, "cmbthanhpho");
             this.cmbthanhpho.FormattingEnabled = true;
             this.cmbthanhpho.Items.AddRange(new object[] {
@@ -123,22 +105,12 @@
             this.btntimkiem.Name = "btntimkiem";
             this.btntimkiem.UseVisualStyleBackColor = true;
             // 
-            // cmbgiathuemin
+            // cmbgiathue
             // 
-            resources.ApplyResources(this.cmbgiathuemin, "cmbgiathuemin");
-            this.cmbgiathuemin.FormattingEnabled = true;
-            this.cmbgiathuemin.Name = "cmbgiathuemin";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // cmbgiathuemax
-            // 
-            resources.ApplyResources(this.cmbgiathuemax, "cmbgiathuemax");
-            this.cmbgiathuemax.FormattingEnabled = true;
-            this.cmbgiathuemax.Name = "cmbgiathuemax";
+            this.cmbgiathue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbgiathue, "cmbgiathue");
+            this.cmbgiathue.FormattingEnabled = true;
+            this.cmbgiathue.Name = "cmbgiathue";
             // 
             // label2
             // 
@@ -159,22 +131,44 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
+            // cmbloainha
+            // 
+            this.cmbloainha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmbloainha, "cmbloainha");
+            this.cmbloainha.FormattingEnabled = true;
+            this.cmbloainha.Name = "cmbloainha";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
             // frmlocthongtin
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbloainha);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbgiathuemax);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmbgiathuemin);
+            this.Controls.Add(this.cmbgiathue);
             this.Controls.Add(this.btntimkiem);
             this.Controls.Add(this.btnlocthem);
             this.Controls.Add(this.cmbthanhpho);
-            this.Controls.Add(this.cmbcapnha);
-            this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmlocthongtin";
@@ -192,20 +186,20 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtsearch;
-        private System.Windows.Forms.ComboBox cmbcapnha;
         private System.Windows.Forms.Label lblt;
         private System.Windows.Forms.ComboBox cmbthanhpho;
         private System.Windows.Forms.Button btnlocthem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btntimkiem;
         private System.Windows.Forms.Button btnclose;
-        private System.Windows.Forms.ComboBox cmbgiathuemin;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbgiathuemax;
+        private System.Windows.Forms.ComboBox cmbgiathue;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cmbloainha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

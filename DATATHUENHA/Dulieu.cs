@@ -16,11 +16,14 @@ namespace Thuenha.DATATHUENHA
         public virtual DbSet<administrative_units> administrative_units { get; set; }
         public virtual DbSet<Dangnhap> Dangnhaps { get; set; }
         public virtual DbSet<district> districts { get; set; }
+        public virtual DbSet<Gia> Gias { get; set; }
+        public virtual DbSet<Locdientich> Locdientiches { get; set; }
+        public virtual DbSet<phanloainha> phanloainhas { get; set; }
         public virtual DbSet<province> provinces { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Thongtinnha> Thongtinnhas { get; set; }
         public virtual DbSet<ward> wards { get; set; }
         public virtual DbSet<Dangky> Dangkies { get; set; }
-        public virtual DbSet<Gia> Gias { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -63,10 +66,35 @@ namespace Thuenha.DATATHUENHA
                 .WithOptional(e => e.district)
                 .HasForeignKey(e => e.district_code);
 
+            modelBuilder.Entity<Gia>()
+                .Property(e => e.code)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Locdientich>()
+                .Property(e => e.code)
+                .IsFixedLength();
+
+            modelBuilder.Entity<phanloainha>()
+                .Property(e => e.maloainha)
+                .IsFixedLength();
+
+            modelBuilder.Entity<phanloainha>()
+                .HasMany(e => e.Thongtinnhas)
+                .WithRequired(e => e.phanloainha)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<province>()
                 .HasMany(e => e.districts)
                 .WithOptional(e => e.province)
                 .HasForeignKey(e => e.province_code);
+
+            modelBuilder.Entity<Thongtinnha>()
+                .Property(e => e.manha)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Thongtinnha>()
+                .Property(e => e.maloainha)
+                .IsFixedLength();
 
             modelBuilder.Entity<Dangky>()
                 .Property(e => e.User)
