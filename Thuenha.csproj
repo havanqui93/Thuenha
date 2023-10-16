@@ -33,8 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +63,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATATHUENHA\administrative_regions.cs" />
+    <Compile Include="DATATHUENHA\administrative_units.cs" />
+    <Compile Include="DATATHUENHA\Dangky.cs" />
+    <Compile Include="DATATHUENHA\Dangnhap.cs" />
+    <Compile Include="DATATHUENHA\district.cs" />
+    <Compile Include="DATATHUENHA\Dulieu.cs" />
+    <Compile Include="DATATHUENHA\Gia.cs" />
+    <Compile Include="DATATHUENHA\province.cs" />
+    <Compile Include="DATATHUENHA\sysdiagram.cs" />
+    <Compile Include="DATATHUENHA\ward.cs" />
+    <Compile Include="Locthem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locthem.Designer.cs">
+      <DependentUpon>Locthem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locthongtin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +87,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quanly.Designer.cs">
+      <DependentUpon>Quanly.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Locthem.resx">
+      <DependentUpon>Locthem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locthongtin.resx">
       <DependentUpon>Locthongtin.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +108,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
