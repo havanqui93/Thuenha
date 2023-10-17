@@ -39,6 +39,27 @@ namespace Thuenha
             List<phanloainha> pln = db.phanloainhas.ToList();
             hienthicmbloainha(pln);
 
+            List<Thongtinnha> ttn = db.Thongtinnhas.ToList();
+            hienthiDS(ttn);
+
+        }
+
+        //hiển thị dữ liệu dgv
+        private void hienthiDS(List<Thongtinnha> ttn)
+        {
+            dgvdata.Rows.Clear();
+            foreach (Thongtinnha item in ttn)
+            {
+                int index = dgvdata.Rows.Add();
+                dgvdata.Rows[index].Cells[0].Value = item.manha;
+                dgvdata.Rows[index].Cells[1].Value = item.maloainha;
+                dgvdata.Rows[index].Cells[2].Value = item.dientich;
+                dgvdata.Rows[index].Cells[3].Value = item.sophongngu;
+                dgvdata.Rows[index].Cells[4].Value = item.sonvs;
+                dgvdata.Rows[index].Cells[5].Value = item.diachi;
+                dgvdata.Rows[index].Cells[6].Value = item.giatien;
+                dgvdata.Rows[index].Cells[7].Value = item.ngaydang;
+            }      
         }
 
 
