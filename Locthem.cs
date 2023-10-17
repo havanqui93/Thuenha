@@ -21,6 +21,7 @@ namespace Thuenha
             db = new Dulieu();
         }
 
+        //form tổng
         private void Locthem_Load(object sender, EventArgs e)
         {
             cmbphongngu.SelectedIndex = 0;
